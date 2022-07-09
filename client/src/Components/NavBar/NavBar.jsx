@@ -10,6 +10,8 @@ const NavBar = (props) => {
           height="100px"
           alt="monbebe logo"
         ></img>
+        Music
+        <small className="text-muted">Library</small>
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end"></Navbar.Collapse>
