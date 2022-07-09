@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css'
 import axios from 'axios';
+import NavBar from './Components/NavBar/NavBar';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <div>
-      
+       <h4 style={{margin: '1em'}}><NavBar /></h4>
       <button onClick={() => getAllSongs()}>Get All Songs</button>
     </div>
   );
