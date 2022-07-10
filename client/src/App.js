@@ -27,7 +27,7 @@ function App() {
        <NavBar />
       {/* <button onClick={() => getAllSongs()}>Get All Songs</button> */}
         <AlbumArtDisplay />
-        <DisplayMusic />
+        <DisplayMusic songs={songs}/>
         <SearchBar />
     </div>
   );

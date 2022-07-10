@@ -1,4 +1,5 @@
 import "./DisplayMusic.css";
+import DisplayMusicRow from "../DisplayMusicRow/DisplayMusicRow";
 
 const DisplayMusic = (props) => {
   return (
@@ -13,11 +14,9 @@ const DisplayMusic = (props) => {
         </tr>
       </thead>
       <tbody>
-        {/* {props.parentEntries.map((entry, index) => {
-            return (
-            <DisplayMusicRow key={index} />
-            );
-        })} */}
+        {props.songs.map((song, index) => {
+          return <DisplayMusicRow key={index} song={song} />;
+        })}
       </tbody>
     </table>
   );
