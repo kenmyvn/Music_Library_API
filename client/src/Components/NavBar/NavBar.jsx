@@ -4,7 +4,7 @@ import "./NavBar.css";
 const NavBar = (props) => {
   return (
     <Navbar className="center">
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="#home" className="navbar-brand yes">
         <img
           src="/monbebe_logo_main-1024x223.png"
           height="100px"
