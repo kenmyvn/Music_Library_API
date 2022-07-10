@@ -13,7 +13,6 @@ function App() {
 
   useEffect(() => {
     getAllSongs()
-    postNewSong()
     console.log('Hello World')
   }, []);
 
@@ -24,9 +23,9 @@ function App() {
     setSongs(response.data)
   }
 
-  async function postNewSong(){
-    const response = await axios.post('http://127.0.0.1:8000/music/');
-    setSongs(response.data)
+  async function postNewSong(newSong){
+    await axios.post('http://127.0.0.1:8000/music/', newSong).then(res => setSongs([...songs, res]));
+    // setSongs(response.data)
   }
 
   return (
