@@ -3,7 +3,8 @@ import './App.css'
 import axios from 'axios';
 import NavBar from './Components/NavBar/NavBar';
 import AlbumArtDisplay from './Components/AlbumArtDisplay/AlbumArtDisplay';
-// import AlbumArtDisplay from './Components/AlbumArtDisplay/AlbumArtDisplay';
+import DisplayMusic from './Components/DisplayMusic/DisplayMusic';
+import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
 
@@ -26,6 +27,8 @@ function App() {
        <NavBar />
       {/* <button onClick={() => getAllSongs()}>Get All Songs</button> */}
         <AlbumArtDisplay />
+        <DisplayMusic />
+        <SearchBar />
     </div>
   );
 }
