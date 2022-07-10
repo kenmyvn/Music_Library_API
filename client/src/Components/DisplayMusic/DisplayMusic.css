@@ -1,7 +1,10 @@
-.table table-sm {
-  border: 1 px;
+.table {
   border-style: solid;
-  border-color: black;
   margin: 1em;
   padding: 1em;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+  /* overflow: scroll; */
 }

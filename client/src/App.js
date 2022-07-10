@@ -5,6 +5,7 @@ import NavBar from './Components/NavBar/NavBar';
 import AlbumArtDisplay from './Components/AlbumArtDisplay/AlbumArtDisplay';
 import DisplayMusic from './Components/DisplayMusic/DisplayMusic';
 import SearchBar from './Components/SearchBar/SearchBar';
+import AddNewSong from './Components/AddNewSong/AddNewSong';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
 
   useEffect(() => {
     getAllSongs()
+    postNewSong()
     console.log('Hello World')
   }, []);
 
@@ -22,11 +24,17 @@ function App() {
     setSongs(response.data)
   }
 
+  async function postNewSong(){
+    const response = await axios.post('http://127.0.0.1:8000/music/');
+    setSongs(response.data)
+  }
+
   return (
     <div>
        <NavBar />
       {/* <button onClick={() => getAllSongs()}>Get All Songs</button> */}
         <AlbumArtDisplay />
+        <AddNewSong songsProperty={postNewSong}/>
         <DisplayMusic songs={songs}/>
         <SearchBar />
     </div>
