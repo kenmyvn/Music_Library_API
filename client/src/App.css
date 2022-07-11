@@ -3,3 +3,8 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.background {
+  background-position: left 20px bottom 450px;
+  background-repeat: no-repeat;
+}
