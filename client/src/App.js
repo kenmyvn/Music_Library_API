@@ -24,7 +24,7 @@ function App() {
   }
 
   async function postNewSong(newSong){
-    await axios.post('http://127.0.0.1:8000/music/', newSong).then(res => getAllSongs([...songs, res]));
+    await axios.post('http://127.0.0.1:8000/music/', newSong).then(res => setSongs([...songs, res.data]));
   }
 
   return (
