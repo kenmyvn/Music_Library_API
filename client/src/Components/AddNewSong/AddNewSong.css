@@ -6,10 +6,13 @@
 }
 
 .form-control.form {
-  width: 10%;
+  width: 85%;
   height: fit-content;
 }
 
-.btn.btn-outline-secondary {
+.btn.btn-outline-danger {
   width: auto;
+  height: 60px;
+  display: block;
+  justify-content: baseline;
 }
