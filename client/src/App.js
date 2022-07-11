@@ -28,7 +28,7 @@ function App() {
   }
 
   return (
-    <div className="background" style={{ backgroundImage: "url(/monsta-x-shape-of-love-all-members-phone-wallpaper-4k-uhdpaper.com-6@0@g.jpg)"}}>
+    <div className="background" >
        <NavBar />
       {/* <button onClick={() => getAllSongs()}>Get All Songs</button> */}
         <AlbumArtDisplay />
