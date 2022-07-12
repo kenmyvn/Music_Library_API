@@ -2,7 +2,7 @@ import React from "react";
 import { MDBCol, MDBIcon } from "mdbreact";
 import "./SearchBar.css";
 
-const SearchBar = (props) => {
+const SearchBar = ({ userInput, setUserInput }) => {
   return (
     <MDBCol md="6">
       <form className="form-inline mt-4 mb-4">
@@ -12,6 +12,8 @@ const SearchBar = (props) => {
           type="text"
           placeholder="Search"
           aria-label="Search"
+          value={userInput}
+          onChange={(e) => setUserInput(e.target.value)}
         />
       </form>
     </MDBCol>

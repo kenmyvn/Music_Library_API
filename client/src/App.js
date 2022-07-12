@@ -10,6 +10,7 @@ import AddNewSong from './Components/AddNewSong/AddNewSong';
 function App() {
 
   const [songs, setSongs] = useState([]);
+  const [userInput, setUserInput] = useState('');
 
   useEffect(() => {
     getAllSongs()
@@ -27,6 +28,8 @@ function App() {
     await axios.post('http://127.0.0.1:8000/music/', newSong).then(res => setSongs([...songs, res.data]));
   }
 
+
+
   return (
     <div className="background" >
        <NavBar />
@@ -34,7 +37,7 @@ function App() {
         <AlbumArtDisplay />
         <AddNewSong songsProperty={postNewSong}/>
         <DisplayMusic songs={songs}/>
-        <SearchBar />
+        <SearchBar userInput={userInput} setUserInput={setUserInput}/>
     </div>
   );
 }
