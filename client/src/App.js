@@ -28,16 +28,13 @@ function App() {
     await axios.post('http://127.0.0.1:8000/music/', newSong).then(res => setSongs([...songs, res.data]));
   }
 
-
-
   return (
     <div className="background" >
        <NavBar />
-      {/* <button onClick={() => getAllSongs()}>Get All Songs</button> */}
         <AlbumArtDisplay />
         <AddNewSong songsProperty={postNewSong}/>
-        <DisplayMusic songs={songs}/>
-        <SearchBar userInput={userInput} setUserInput={setUserInput}/>
+        <DisplayMusic songs={songs} userInput={userInput}/>
+        <SearchBar userInput={userInput} setUserInput={setUserInput} />
     </div>
   );
 }

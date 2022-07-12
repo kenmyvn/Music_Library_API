@@ -14,9 +14,24 @@ const DisplayMusic = (props) => {
         </tr>
       </thead>
       <tbody>
-        {props.songs.map((song, index) => {
-          return <DisplayMusicRow key={index} song={song} />;
-        })}
+        {props.songs
+          .filter((song) => {
+            return (
+              song.title
+                .toLowerCase()
+                .includes(props.userInput.toLowerCase()) ||
+              song.artist
+                .toLowerCase()
+                .includes(props.userInput.toLowerCase()) ||
+              song.album
+                .toLowerCase()
+                .includes(props.userInput.toLowerCase()) ||
+              song.genre.toLowerCase().includes(props.userInput.toLowerCase())
+            );
+          })
+          .map((song, index) => {
+            return <DisplayMusicRow key={index} song={song} />;
+          })}
       </tbody>
     </table>
   );
